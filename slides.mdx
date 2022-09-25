@@ -1,0 +1,839 @@
+import imageBorderSolidRed from './src/assets/borderSolidRed.png';
+import imageButtonDirectory from './src/assets/buttonDirectory.png';
+import imageEmotion from './src/assets/logoEmotion.png';
+import imageStyledComponents from './src/assets/logoStyledComponents.png';
+import imageCss from './src/assets/logoCss.png';
+import imageSass from './src/assets/logoSass.png';
+import imageMui from './src/assets/logoMui.png';
+import imageReactBootstrap from './src/assets/logoReactBootstrap.png';
+import imageDeviceUsageGermany from './src/assets/deviceUsageGermany.png';
+import imageUserCenteredDesign from './src/assets/user-centered-design.png';
+import imageMobileFirst from './src/assets/mobile-first.png';
+import imageResponsiveWebDesign from './src/assets/responsive-web-design.jpg';
+import imageMuiComponents from './src/assets/mui-components.png';
+import imageReactBootstrapComponents from './src/assets/react-bootstrap-components.png';
+
+import { ButtonPrimary, ButtonSecondary } from './src/components/MyButton/button.jsx';
+import { GuessButtonColor } from './src/components/MyButton/guess-button-color.jsx';
+import { ComponentLayout } from './src/components/component-layout.jsx';
+
+import { themes } from 'mdx-deck'
+export const theme = {
+...themes.future,
+...themes.prism
+}
+
+## Cascading Style Sheets
+
+<iframe src="https://giphy.com/embed/13FrpeVH09Zrb2" width="480" height="462" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
+
+<Notes>
+
+Freut mich, dass so viele da sind. Das zeigt mir, dass ich nicht alleine bin, als ich mit CSS
+angefangen habe und in etwa den Frust, wie hier Peter Griffin aus Family Guy, zu spüren bekommen habe.
+
+Ich hoffe, dass wir das heute gemeinsam aus dem Weg schaffen können.
+
+</Notes>
+
+---
+
+### Eure <span style={{ color: "cadetblue" }}> Wünsche / Erwartungen </span> zum heutigen Workshop?
+
+<Notes>
+
+Dafür würde ich zunächst von euch gerne wissen, welche Wünsche und Erwartungen ihr an den heutigen
+Workshop habt, was wolltet ihr schon immer dazu wissen oder welche Fragen würdet ihr heute gerne
+beantwortet haben?
+
+Ich mache mir Notizen
+
+</Notes>
+
+---
+
+## Agenda
+
+<div style={{  display: "flex", justifyContent: "space-around", width: "60%"}}>
+
+<div>
+
+<div style={{ color: "cadetblue" }}>
+
+### Basics
+
+</div>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "left" }}>
+
+- HTML Elements
+- Selectors
+- Units
+- Margin vs. Padding
+- Z-Index
+- Flexbox
+- Browser DevTools
+
+</div>
+
+</div>
+
+<div>
+
+<div style={{ color: "cadetblue" }}>
+
+### Advanced
+
+</div>
+
+<div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "left" }}>
+
+- CSS-in-JS vs. CSS classes
+- Styling with Mui & Bootstrap
+- CSS Grid
+- Browser Support
+- Web Accessibility
+- Mobile First
+- Tipps & Tricks
+
+</div>
+
+</div>
+
+</div>
+
+<Notes>
+
+Ihr könnt gerne jederzeit zwischendrin unterbrechen und Fragen stellen oder melden.
+Gerne so interaktiv wie möglich, habt ihr Meinungen/ Anekdoten/ Erfahrungen zu den Themen? Gerne erzählen.
+
+</Notes>
+
+---
+
+### HTML Elements
+
+<a style={{ color: "coral" }} href="https://codesandbox.io/s/youthful-night-or9yl3?file=/src/App.js">
+
+Live Coding
+
+</a>
+
+<Notes>
+
+- h1, class und id zeigen
+- Inspector öffnen und Styles von div, p, span zeigen
+(- display: block nimmt die ganze Zeile bei div und p, anders als bei span)
+
+</Notes>
+
+---
+
+### Selectors
+
+<a style={{ color: "coral" }} href="https://www.w3schools.com/cssref/css_selectors.asp">https://www.w3schools.com/cssref/css_selectors.asp</a>
+
+---
+
+### Units
+
+<a style={{ color: "coral" }} href="https://codesandbox.io/s/headless-flower-lkolbd?file=/src/fontSizes-styles.css">
+
+Live Coding
+
+</a>
+
+<Notes>
+
+- Styles der Klasse my-class auf em und rem ändern
+- true auf false ändern
+- container width auf 50% setzen
+
+</Notes>
+
+---
+
+### Margin vs. Padding
+
+<a style={{ color: "coral" }} href="https://codesandbox.io/s/zen-stallman-7jz195?file=/src/App.js">
+
+Live Coding
+
+</a>
+
+
+<Notes>
+
+- padding hinzufügen
+- margin hinzufügen
+- mehrfache Werte hinzufügen:
+
+  - padding: 1rem,
+  - padding: 1rem 2rem,
+  - padding: 1rem 2rem 3rem,
+  - padding: 1rem 2rem 3rem 4rem,
+
+- Eselsbrücke: Kompass!
+
+</Notes>
+
+---
+
+### Z-Index
+
+<a style={{ color: "coral" }} href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index?retiredLocale=de">https://developer.mozilla.org/en-US/docs/Web/CSS/z-index?retiredLocale=de</a>
+
+---
+
+
+## Flexbox
+
+<a style={{ color: "coral" }} href="https://codesandbox.io/s/suspicious-feistel-5fbb6o?file=/src/App.js">
+
+Live Coding
+
+</a>
+
+<Notes>
+
+- display: flex hinzufügen
+- justifyContent: end, center, space- hinzufügen
+- height: 150px von lila
+- align-items: center, end
+- flex-direction: column
+- height: 100%
+- align-items und justify-content sind nun vertauscht in der horizontalen und vertikalen Achse (row: justify = horizontal, align = vertical)
+- gap: 1rem
+- flex-grow: 1
+- Ausblick: align-self: end
+
+</Notes>
+
+---
+
+## Flexbox
+
+<a style={{ color: "coral" }} href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a>
+
+<a style={{ color: "coral" }} href="https://flexboxfroggy.com/#de">https://flexboxfroggy.com/#de</a>
+
+---
+
+## Browser DevTools
+
+<Notes>
+
+- Mit Pfeilen in Elements navigieren
+- element styles direkt hinzufügen
+- Werte an- und ausschalten
+- computed styles in DevTools zeigen
+- Mobile Devices Ansicht - Surface Duo
+
+</Notes>
+
+---
+
+## Advanced Topics
+
+<Notes>
+
+- Noch Fragen?
+
+</Notes>
+
+---
+
+## CSS-in-JS vs. CSS classes
+
+<iframe src="https://giphy.com/embed/W093Amc6yeS3IZbmAz" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+<Notes>
+
+Bei diesem Thema sind sich die Frontend Entwickler alle nicht einig und da kann man online,
+Twitter, Reddit, Stackoverflow durchaus hitzige Diskussionen mitlesen.
+
+Aber erstmal zur Erklärung der beiden Begrifflichkeiten.
+
+</Notes>
+
+---
+
+<div style={{ width: "30%"}}>
+  <ComponentLayout>
+    <ButtonPrimary label="Hier klicken"/>
+  </ComponentLayout>
+</div>
+
+
+<Notes>
+
+Angenommen wir wollen diesen einfachen Button bauen, ohne Funktionalität, bin ich sicher, wenn ich
+hier in die Runde frage, wie ihr das umsetzen würdet, bekommen wir schon sehr verschiedene Ansätze zusammen.
+
+</Notes>
+
+---
+
+## CSS-in-JS
+
+<Notes>
+
+Erster Ansatz mit CSS-in-JS und der Name ist hier Programm.
+
+</Notes>
+
+---
+
+### Inline Styling
+
+```jsx
+// button.jsx
+export const MyButton = () => {
+  return (
+    <button
+      style={{
+        padding: "1rem",
+        borderRadius: "5px",
+        backgroundColor: "#669900",
+        color: "white",
+      }}
+    >
+      Hier klicken
+    </button>
+  );
+};
+```
+
+<Notes>
+
+Ich weiß, viele von euch haben so bereits Styling geschrieben, ich selbst auch. Was gefällt euch
+an diesem Ansatz und was vielleicht auch nicht?
+
+</Notes>
+
+---
+
+### Inline styling
+
+<div>
+
+  ✔️Schnelles Einfügen von CSS
+
+  <div>
+
+  ❌ Bläht den JSX Code stark auf
+
+  </div>
+
+  <div>
+
+  ❌ Keine schnelle Wiederverwendung
+
+  </div>
+
+</div>
+
+---
+
+### Styled Components
+
+<SplitRight style={{ width: "75%" }}>
+
+```jsx
+// button.jsx
+import styled from '@emotion/styled';
+
+const StButton = styled.button({
+  padding: "1rem",
+  borderRadius: "5px",
+  backgroundColor: "#669900",
+  color: "white"
+});
+
+export const MyButton = () => {
+  return <StButton>Hier klicken</StButton>
+}
+```
+
+<div style={{ display: "flex"}}>
+
+  <img src={imageEmotion} alt="imageEmotion" style={{ width: "5rem", height: "auto" }}></img>
+
+  Emotion
+
+  </div>
+
+  <div style={{ display: "flex"}}>
+
+  <img src={imageStyledComponents} alt="imageStyledComponents" style={{ width: "5rem", height: "auto" }}></img>
+
+  Styled Components
+
+</div>
+
+</SplitRight>
+
+<Notes>
+
+- Es gibt viele verschiedene Libraries, mit denen Styled Components einfach umzusetzen sind.
+- Unterschiede in Syntax beachten
+- Material Ui setzt beispielsweise auf Emotion
+- Daher müssten alle im Team Mobility Inside solchen Code schon mal gesehen haben.
+
+Wenn ihr styled components schon verwendet habt: was gefällt/ missfällt euch an diesem Ansatz?
+Wer es noch nicht benutzt hat: was denkt ihr darüber?
+
+</Notes>
+
+---
+
+### Styled Components
+
+<div>
+
+  <div>
+
+  ✔️Übersichtlich & wartbar
+
+  </div>
+
+  <div>
+
+  ✔️Schnelle Wiederverwendung
+
+  </div>
+
+  ❌ Design Part am Anfang jeder JSX file
+
+</div>
+
+---
+
+## CSS, SCSS, SASS
+
+<div style={{ width: "50%", display: "flex", justifyContent: "space-evenly", alignItems: "center" }}>
+
+  <img src={imageCss} alt="imageCss" style={{width: '10rem', height: 'auto'}}></img>
+
+  <img src={imageSass} alt="imageSass" style={{width: '10rem', height: 'auto'}}></img>
+
+</div>
+
+<Notes>
+
+- SCSS = SASS, nur unterschiedliche Syntax
+- SCSS und SASS mehr Funktionalität als CSS, Bsp: Verschachtelung von Klassen, Verwendung von Variablen usw.
+
+</Notes>
+
+---
+
+## CSS classes
+
+<div style={{ width: "100%", display: "flex", justifyContent: "space-evenly"}}>
+
+```css
+// button.css
+
+.button-primary {
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #669900;
+  color: white;
+}
+```
+
+```jsx
+// button.jsx
+
+export const MyButton = () => {
+  return (
+    <button className={"button-primary"}>
+      Hier klicken
+    </button>
+}
+```
+
+</div>
+
+---
+
+### CSS classes
+
+<div>
+
+  <div>
+
+  ✔️Performanter als CSS-in-JS Lösungen
+
+  </div>
+
+  <div>
+
+  ✔️Trennung von Logik und Design
+
+  </div>
+
+  <div>
+
+  ❌ Globaler Scope
+
+  </div>
+
+  <div style={{ marginLeft: "3rem"}}>
+
+  -> Klassennamen sollten nicht mehrfach vergeben werden
+
+  </div>
+
+  <div style={{ marginLeft: "3rem"}}>
+
+  -> Verwendung von css-modules für lokalen Scope
+
+  </div>
+
+  <div>
+
+  ❌ Potentiell uneindeutige Namensgebung
+
+  </div>
+
+  <div>
+
+  ❌ Erfordert viel Disziplin und Erfahrung, ansonsten schwere Wartbarkeit
+
+  </div>
+
+</div>
+
+<Notes>
+
+- Performanter: weil der Browser hier keinen JS Code entpacken/ ausführen muss, um an den CSS Code ranzukommen
+- Klassennamen: Styles werden überschrieben bei doppelt genutzten Namen
+- uneindeutige Namensgebung: wenn man (wieso auch immer) den 10ten Button styled, braucht man kreative Namen für die Klassen
+- Weiterer Negativpunkt für CSS Klassen: Wie werden sie eingesetzt? Siehe Next Slides
+
+</Notes>
+
+---
+
+<div style={{ width: "30%"}}>
+  <ComponentLayout>
+    <ButtonPrimary label="Senden"/>
+    <ButtonSecondary label="Abbrechen"/>
+  </ComponentLayout>
+</div>
+
+---
+
+<div>
+
+```css
+.button-primary {
+  padding: 1rem;
+  border-radius: 5px;
+  border: 3px solid #669900;
+  background-color: #669900;
+  color: white;
+}
+
+.button-secondary {
+  padding: 1rem;
+  border-radius: 5px;
+  border: 3px solid #669900;
+  background-color: white;
+  color: black;
+}
+```
+
+```jsx
+<button className="button-primary">{label}</button>
+```
+
+</div>
+
+---
+
+<div>
+
+```css
+.button-base {
+  padding: 1rem;
+  border-radius: 5px;
+  border: 3px solid #669900;
+}
+
+.button-primary {
+  background-color: #669900;
+  color: white;
+}
+
+.button-secondary {
+  background-color: white;
+  color: black;
+}
+```
+
+```jsx
+<button className="button-base button-primary">{label}</button>
+```
+
+</div>
+
+<Notes>
+
+- Beispiel mit SASS zeigen (Klassen verschachtelt)
+- Mindeset bei CSS Gemeinsamkeiten beschreiben und danach zu spezifizieren
+- CSS-in-JS: CSS fügt sich dem JS Code, bei classes sind sie viel weiter voneinander entkoppelt
+- Warnung: Respekt vor CSS Code haben, mit Disziplin da herangehen, konsistent sein, ansonsten Spaghetti Code und euch fliegt das Styling um die Ohren
+- Vertrauen an die Frontend-Entwickler im Team: button-base muss und darf nur genau das beinhalten, darf keine Seiteneffekte haben, nicht ausufern, ansonsten bringt ihr euch zu viele Probleme mit ins Projekt rein
+
+</Notes>
+
+---
+
+## CSS Modules
+
+<a style={{ color: "coral" }} href="https://codesandbox.io/s/jolly-blackburn-ke87p7?file=/src/App.js">
+
+Live Coding
+
+</a>
+
+
+<Notes>
+
+- Aufrufen der Klassennamen zeigen
+- Lokaler Scope, da Klassennamen doppelt verwendet werden können
+- DevTools öffnen, generierte Klassennamen zeigen
+- Advanced Tooling: Rückverfolgbarkeit schwierig, geht aber mit Source Maps
+
+</Notes>
+
+---
+
+```jsx
+<RedButton
+  style={{ backgroundColor: "pink" }}
+  className="blue-button green-button"
+  id="yellow-button"
+>
+  What color am I?
+</RedButton>
+```
+
+---
+
+```jsx
+<RedButton
+  style={{ backgroundColor: "pink" }}
+  className="blue-button green-button"
+  id="yellow-button"
+>
+  What color am I?
+</RedButton>
+```
+
+<GuessButtonColor></GuessButtonColor>
+
+---
+
+### Cascading Order
+
+1. !important
+2. inline style
+3. id
+4. styled components
+5. className
+6. HTML elements
+
+--> order of appearance
+
+<Notes>
+
+- Reihenfolge der Stylings vergleichbar mit Leinwand
+- Spezifitäts Score gibt die Cascading Order an
+- Spezifitäts Score Rechner zeigen
+- immer mit !important ist assi, weil das alles andere überbügelt. Damit sagt ihr dem nächsten Entwickler quasi: ist jetzt dein Problem, weil ich es nicht anders lösen konnte.
+
+</Notes>
+
+---
+
+<iframe src="https://giphy.com/embed/eBmv7914HRAty" width="480" height="365" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+---
+
+## Styling with Mui & React Bootstrap
+
+<div>
+
+  <img src={imageMui} alt="borderSolidRed" style={{width: '10rem', height: 'auto'}}></img>
+
+  <img src={imageReactBootstrap} alt="borderSolidRed" style={{width: '10rem', height: 'auto'}}></img>
+
+</div>
+
+<Notes>
+
+- beide sind in erster Linie Komponenten-Libraries
+- Bootstrap für JS -> für Frameworks/ Libraries wie React, Vue, Angular gibt es nochmal Abzweigungen -> React Bootstrap
+
+</Notes>
+
+---
+
+<Split style={{ width: "60%", height: "100%" }}>
+
+<div>
+
+  Mui
+
+  <img src={imageMuiComponents} alt="muiComponents" style={{width: 'auto', height: '80%'}}></img>
+
+</div>
+
+<div style={{ height: "100%" }}>
+
+  React Bootstrap
+
+  <img src={imageReactBootstrapComponents} alt="reactBootstrapComponents" style={{width: 'auto', height: '80%'}}></img>
+
+</div>
+
+</Split>
+
+---
+
+## CSS Grid
+
+<a style={{ color: "coral" }} href="https://codesandbox.io/s/blazing-architecture-nkz01q?file=/src/App.js">Live Coding</a>
+
+---
+
+## CSS Grid
+
+<a style={{ color: "coral" }} href="https://css-tricks.com/snippets/css/complete-guide-grid/">https://css-tricks.com/snippets/css/complete-guide-grid/</a>
+
+<a style={{ color: "coral" }} href="https://cssgridgarden.com/#de">https://cssgridgarden.com/#de</a>
+
+---
+
+## Browser Support
+
+<a style={{ color: "coral" }} href="https://caniuse.com/">https://caniuse.com/</a>
+
+---
+
+## Web Accessibility
+
+---
+
+## Mobile First
+
+---
+
+<img src={imageDeviceUsageGermany} alt="deviceUsageGermany" style={{width: '70%', height: 'auto'}}></img>
+
+<div style={{ display: "flex" }}>
+
+Quelle:
+
+<p><a style={{ color: "coral", marginLeft: "1rem" }} href="https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet/germany">https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet/germany</a></p>
+
+</div>
+
+<Notes>
+
+- Entwicklung für Mobile wird immer wichtiger
+
+</Notes>
+
+---
+
+<img src={imageUserCenteredDesign} alt="userCenteredDesign" style={{height: '80%', width: 'auto'}}></img>
+
+<Notes>
+
+- Hierfür müssen wir verstehen, wie das Design bzw. User-zentriertes Design funktioniert
+- kleiner Exkurs, das ist ein ganz eigenes Thema
+
+</Notes>
+
+---
+
+### Mobile First
+
+<img src={imageMobileFirst} alt="mobileFirst" style={{width: '50%', height: 'auto'}}></img>
+
+
+<Notes>
+
+- Core-Elemente herausfinden, denn mehr Platz habe wir nicht auf Mobile
+
+</Notes>
+
+---
+
+### Mobile First =/= Responsive Web Design
+
+<img src={imageResponsiveWebDesign} alt="responsiveWebDesign" style={{width: '80%', height: 'auto'}}></img>
+
+<Notes>
+
+- Beispiel funktioniert auf Desktop, sieht aber voll beladen auf dem Handy aus
+- Zu viel Text
+- Wo ist die Navigation?
+- Hintergrund Foto hätte man sich sparen können
+
+</Notes>
+
+---
+
+### Mobile First
+
+- Inhalte: weniger ist mehr
+- Interaktive Elemente hervorheben
+- Keine Hover-Effekte möglich
+- Keine Fullscreen Fotos
+- Auf realen Endgeräten testen
+
+<Notes>
+
+- Inhalte zuerst für mobile Geräte auslegen: weniger ist mehr, kleiner Screen = weniger Platz
+- Interaktive (klickbare) Elemente groß darstellen: Finger Klick braucht mehr Platz als Maus-Klick
+- Keine Hover-Effekte möglich
+- Keine Fullscreen Fotos: Fotos in Hoch- oder Querformat funktionieren nicht bei allen Displaygrößen
+- Auf realen Endgeräten testen, nicht auf Simulatoren verlassen
+
+</Notes>
+
+---
+
+## Tipps & Tricks
+
+---
+
+### Debugging?
+
+<div>
+
+<img src={imageBorderSolidRed} alt="borderSolidRed" style={{width: '480px', height: 'auto'}}></img>
+
+```css
+* {
+  border: 1px solid red;
+}
+```
+
+</div>
+
+---
+
+- Sonstiges
+	- Return in Time Invested? Feedback?
+	- position relative/ absolut veraltet
+
+---
+
+## Eure Fragen?
