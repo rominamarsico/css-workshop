@@ -1,0 +1,32 @@
+.button-base {
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.button-primary {
+  padding: 1rem;
+  border-radius: 5px;
+  border: 3px solid #669900;
+  background-color: #669900;
+  color: white;
+}
+
+.button-secondary {
+  padding: 1rem;
+  border-radius: 5px;
+  border: 3px solid #669900;
+  background-color: white;
+  color: black;
+}
+
+.blue-button {
+  background-color: blue;
+}
+
+.green-button {
+  background-color: green;
+}
+
+#yellow-button{
+  background-color: yellow;
+}
